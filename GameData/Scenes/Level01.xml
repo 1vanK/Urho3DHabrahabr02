@@ -1,0 +1,375 @@
+<?xml version="1.0"?>
+<scene id="1">
+	<attribute name="Name" value="" />
+	<attribute name="Time Scale" value="1" />
+	<attribute name="Smoothing Constant" value="50" />
+	<attribute name="Snap Threshold" value="5" />
+	<attribute name="Elapsed Time" value="7.29518" />
+	<attribute name="Next Replicated Node ID" value="21" />
+	<attribute name="Next Replicated Component ID" value="53" />
+	<attribute name="Next Local Node ID" value="16777298" />
+	<attribute name="Next Local Component ID" value="16777932" />
+	<attribute name="Variables" />
+	<attribute name="Variable Names" value="" />
+	<component type="Octree" id="1" />
+	<component type="DebugRenderer" id="2" />
+	<component type="Zone" id="6">
+		<attribute name="Bounding Box Min" value="-100 -100 -100" />
+		<attribute name="Bounding Box Max" value="100 100 100" />
+		<attribute name="Ambient Color" value="0.5 0.5 0.5 1" />
+		<attribute name="Fog Color" value="0.4 0.5 0.8 1" />
+	</component>
+	<component type="PhysicsWorld" id="9" />
+	<node id="3">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="Ground" />
+		<attribute name="Position" value="0 0 0" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<component type="StaticModel" id="4">
+			<attribute name="Model" value="Model;Models/Ground.mdl" />
+			<attribute name="Material" value="Material;Materials/Ground.xml" />
+		</component>
+		<component type="CollisionShape" id="15">
+			<attribute name="Shape Type" value="StaticPlane" />
+		</component>
+		<component type="RigidBody" id="16">
+			<attribute name="Friction" value="1" />
+			<attribute name="Rolling Friction" value="1" />
+		</component>
+	</node>
+	<node id="16777220">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="Light" />
+		<attribute name="Position" value="0 20 0" />
+		<attribute name="Rotation" value="0.833518 0.433902 0.303376 -0.157927" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<component type="Light" id="16777228">
+			<attribute name="Light Type" value="Directional" />
+			<attribute name="Brightness Multiplier" value="0.8" />
+			<attribute name="Cast Shadows" value="true" />
+		</component>
+	</node>
+	<node id="16777229">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="Cannon" />
+		<attribute name="Position" value="0 1 0" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<component type="AnimatedModel" id="16777230">
+			<attribute name="Model" value="Model;Models/Cannon.mdl" />
+			<attribute name="Material" value="Material;Materials/Cannon.xml" />
+			<attribute name="Cast Shadows" value="true" />
+			<attribute name="Bone Animation Enabled">
+				<variant type="Bool" value="true" />
+				<variant type="Bool" value="true" />
+				<variant type="Bool" value="true" />
+				<variant type="Bool" value="true" />
+				<variant type="Bool" value="true" />
+				<variant type="Bool" value="true" />
+				<variant type="Bool" value="true" />
+			</attribute>
+			<attribute name="Animation States">
+				<variant type="Int" value="0" />
+			</attribute>
+		</component>
+		<component type="ScriptInstance" id="16777231">
+			<attribute name="Delayed Method Calls" value="0" />
+			<attribute name="Script File" value="ScriptFile;Scripts/Cannon.as" />
+			<attribute name="Class Name" value="Cannon" />
+			<attribute name="direction" value="1" />
+			<attribute name="shootDelay" value="0" />
+		</component>
+		<component type="AnimationController" id="16777418">
+			<attribute name="Node Animation States">
+				<variant type="Int" value="0" />
+			</attribute>
+		</component>
+		<component type="RigidBody" id="16777431">
+			<attribute name="Physics Position" value="0 1 0" />
+		</component>
+		<component type="CollisionShape" id="16777432">
+			<attribute name="Shape Type" value="Capsule" />
+			<attribute name="Size" value="2 4.3 1" />
+			<attribute name="Offset Position" value="0 1.12 0" />
+		</component>
+		<node id="16777230">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="Forward" />
+			<attribute name="Position" value="0 0 -0" />
+			<attribute name="Rotation" value="0.707107 1.54543e-08 -0.707107 -1.54543e-08" />
+			<attribute name="Scale" value="1 1 1" />
+			<attribute name="Variables" />
+			<node id="16777231">
+				<attribute name="Is Enabled" value="true" />
+				<attribute name="Name" value="CannonballPlace" />
+				<attribute name="Position" value="0 2.81524 -0" />
+				<attribute name="Rotation" value="1 -0 -0 0" />
+				<attribute name="Scale" value="1 1 1" />
+				<attribute name="Variables" />
+			</node>
+			<node id="16777232">
+				<attribute name="Is Enabled" value="true" />
+				<attribute name="Name" value="Back" />
+				<attribute name="Position" value="0 0 -0" />
+				<attribute name="Rotation" value="0 -1 -0 -4.37114e-08" />
+				<attribute name="Scale" value="1 1 1" />
+				<attribute name="Variables" />
+			</node>
+			<node id="16777233">
+				<attribute name="Is Enabled" value="true" />
+				<attribute name="Name" value="Side1" />
+				<attribute name="Position" value="0 0 -0" />
+				<attribute name="Rotation" value="0.707107 0.707107 -0 0" />
+				<attribute name="Scale" value="1 1 1" />
+				<attribute name="Variables" />
+			</node>
+			<node id="16777234">
+				<attribute name="Is Enabled" value="true" />
+				<attribute name="Name" value="Side4" />
+				<attribute name="Position" value="0 0 -0" />
+				<attribute name="Rotation" value="0.5 0.5 -0.5 0.5" />
+				<attribute name="Scale" value="1 1 1" />
+				<attribute name="Variables" />
+			</node>
+			<node id="16777235">
+				<attribute name="Is Enabled" value="true" />
+				<attribute name="Name" value="Side2" />
+				<attribute name="Position" value="0 0 -0" />
+				<attribute name="Rotation" value="-5.33851e-08 -0.707107 -0.707107 1.35418e-07" />
+				<attribute name="Scale" value="1 1 1" />
+				<attribute name="Variables" />
+			</node>
+			<node id="16777236">
+				<attribute name="Is Enabled" value="true" />
+				<attribute name="Name" value="Side3" />
+				<attribute name="Position" value="0 0 -0" />
+				<attribute name="Rotation" value="0.5 -0.5 -0.5 0.5" />
+				<attribute name="Scale" value="1 1 1" />
+				<attribute name="Variables" />
+			</node>
+		</node>
+	</node>
+	<node id="10">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="Cube" />
+		<attribute name="Position" value="-0.00684045 4.99945 11.6386" />
+		<attribute name="Rotation" value="0.999998 0.000175824 -0.00190696 -2.05099e-05" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<component type="StaticModel" id="17">
+			<attribute name="Model" value="Model;Models/Cube.mdl" />
+			<attribute name="Material" value="Material;Materials/Cube.xml" />
+			<attribute name="Cast Shadows" value="true" />
+		</component>
+		<component type="RigidBody" id="22">
+			<attribute name="Physics Rotation" value="0.999998 0.000176272 -0.00190715 -2.12194e-05" />
+			<attribute name="Physics Position" value="-0.00684234 4.99945 11.6386" />
+			<attribute name="Mass" value="1" />
+			<attribute name="Friction" value="1" />
+			<attribute name="Rolling Friction" value="0.2" />
+		</component>
+		<component type="CollisionShape" id="23">
+			<attribute name="Size" value="2 2 2" />
+		</component>
+	</node>
+	<node id="12">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="Cube" />
+		<attribute name="Position" value="-0.0103323 4.99942 9.56755" />
+		<attribute name="Rotation" value="0.99999 0.00019904 -0.0044783 -1.97588e-05" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<component type="StaticModel" id="24">
+			<attribute name="Model" value="Model;Models/Cube.mdl" />
+			<attribute name="Material" value="Material;Materials/Cube.xml" />
+			<attribute name="Cast Shadows" value="true" />
+		</component>
+		<component type="RigidBody" id="25">
+			<attribute name="Physics Rotation" value="0.99999 0.000199176 -0.0044781 -1.92415e-05" />
+			<attribute name="Physics Position" value="-0.0103364 4.99942 9.56754" />
+			<attribute name="Mass" value="1" />
+			<attribute name="Friction" value="1" />
+			<attribute name="Rolling Friction" value="0.2" />
+		</component>
+		<component type="CollisionShape" id="26">
+			<attribute name="Size" value="2 2 2" />
+		</component>
+	</node>
+	<node id="13">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="Cube" />
+		<attribute name="Position" value="-0.00801222 4.99956 7.55449" />
+		<attribute name="Rotation" value="0.999998 7.17061e-05 -0.00186141 1.29893e-05" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<component type="StaticModel" id="27">
+			<attribute name="Model" value="Model;Models/Cube.mdl" />
+			<attribute name="Material" value="Material;Materials/Cube.xml" />
+			<attribute name="Cast Shadows" value="true" />
+		</component>
+		<component type="RigidBody" id="28">
+			<attribute name="Physics Rotation" value="0.999998 7.1741e-05 -0.00186198 1.25703e-05" />
+			<attribute name="Physics Position" value="-0.00801765 4.99956 7.55448" />
+			<attribute name="Mass" value="1" />
+			<attribute name="Friction" value="1" />
+			<attribute name="Rolling Friction" value="0.2" />
+		</component>
+		<component type="CollisionShape" id="29">
+			<attribute name="Size" value="2 2 2" />
+		</component>
+	</node>
+	<node id="14">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="Cube" />
+		<attribute name="Position" value="-0.00446611 0.999805 11.6122" />
+		<attribute name="Rotation" value="1 0.00011288 1.73239e-05 -6.82718e-06" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<component type="StaticModel" id="30">
+			<attribute name="Model" value="Model;Models/Cube.mdl" />
+			<attribute name="Material" value="Material;Materials/Cube.xml" />
+			<attribute name="Cast Shadows" value="true" />
+		</component>
+		<component type="RigidBody" id="31">
+			<attribute name="Physics Rotation" value="1 0.00011288 1.73239e-05 -6.82718e-06" />
+			<attribute name="Physics Position" value="-0.00446793 0.999805 11.6122" />
+			<attribute name="Mass" value="1" />
+			<attribute name="Friction" value="1" />
+			<attribute name="Rolling Friction" value="0.2" />
+		</component>
+		<component type="CollisionShape" id="32">
+			<attribute name="Size" value="2 2 2" />
+		</component>
+	</node>
+	<node id="15">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="Cube" />
+		<attribute name="Position" value="-0.00690158 0.999722 9.54654" />
+		<attribute name="Rotation" value="1 0.000172255 -0.000318503 -4.77588e-06" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<component type="StaticModel" id="33">
+			<attribute name="Model" value="Model;Models/Cube.mdl" />
+			<attribute name="Material" value="Material;Materials/Cube.xml" />
+			<attribute name="Cast Shadows" value="true" />
+		</component>
+		<component type="RigidBody" id="34">
+			<attribute name="Physics Rotation" value="1 0.000172255 -0.000318503 -4.77588e-06" />
+			<attribute name="Physics Position" value="-0.00690076 0.999721 9.54654" />
+			<attribute name="Mass" value="1" />
+			<attribute name="Friction" value="1" />
+			<attribute name="Rolling Friction" value="0.2" />
+		</component>
+		<component type="CollisionShape" id="35">
+			<attribute name="Size" value="2 2 2" />
+		</component>
+	</node>
+	<node id="16">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="Cube" />
+		<attribute name="Position" value="-0.00405811 0.999869 7.53414" />
+		<attribute name="Rotation" value="1 7.34156e-05 1.7336e-05 -3.31246e-05" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<component type="StaticModel" id="36">
+			<attribute name="Model" value="Model;Models/Cube.mdl" />
+			<attribute name="Material" value="Material;Materials/Cube.xml" />
+			<attribute name="Cast Shadows" value="true" />
+		</component>
+		<component type="RigidBody" id="37">
+			<attribute name="Physics Rotation" value="1 7.34156e-05 1.7336e-05 -3.31246e-05" />
+			<attribute name="Physics Position" value="-0.00406122 0.999869 7.53414" />
+			<attribute name="Mass" value="1" />
+			<attribute name="Friction" value="1" />
+			<attribute name="Rolling Friction" value="0.2" />
+		</component>
+		<component type="CollisionShape" id="38">
+			<attribute name="Size" value="2 2 2" />
+		</component>
+	</node>
+	<node id="17">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="Cube" />
+		<attribute name="Position" value="0.0084641 2.99961 11.6284" />
+		<attribute name="Rotation" value="0.999998 0.000109588 -0.00203414 -1.3878e-05" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<component type="StaticModel" id="39">
+			<attribute name="Model" value="Model;Models/Cube.mdl" />
+			<attribute name="Material" value="Material;Materials/Cube.xml" />
+			<attribute name="Cast Shadows" value="true" />
+		</component>
+		<component type="RigidBody" id="40">
+			<attribute name="Physics Rotation" value="0.999998 0.000108249 -0.00203427 -1.45816e-05" />
+			<attribute name="Physics Position" value="0.00846131 2.99961 11.6284" />
+			<attribute name="Mass" value="1" />
+			<attribute name="Friction" value="1" />
+			<attribute name="Rolling Friction" value="0.2" />
+		</component>
+		<component type="CollisionShape" id="41">
+			<attribute name="Size" value="2 2 2" />
+		</component>
+	</node>
+	<node id="18">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="Cube" />
+		<attribute name="Position" value="0.00303124 2.99946 9.55525" />
+		<attribute name="Rotation" value="0.999997 0.000174908 -0.00250126 -2.00044e-05" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<component type="StaticModel" id="42">
+			<attribute name="Model" value="Model;Models/Cube.mdl" />
+			<attribute name="Material" value="Material;Materials/Cube.xml" />
+			<attribute name="Cast Shadows" value="true" />
+		</component>
+		<component type="RigidBody" id="43">
+			<attribute name="Physics Rotation" value="0.999997 0.000175043 -0.00250106 -1.94867e-05" />
+			<attribute name="Physics Position" value="0.00302579 2.99946 9.55524" />
+			<attribute name="Mass" value="1" />
+			<attribute name="Friction" value="1" />
+			<attribute name="Rolling Friction" value="0.2" />
+		</component>
+		<component type="CollisionShape" id="44">
+			<attribute name="Size" value="2 2 2" />
+		</component>
+	</node>
+	<node id="19">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="Cube" />
+		<attribute name="Position" value="0.00755776 2.99971 7.54553" />
+		<attribute name="Rotation" value="0.999998 2.02149e-05 -0.00199952 9.0699e-06" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<component type="StaticModel" id="45">
+			<attribute name="Model" value="Model;Models/Cube.mdl" />
+			<attribute name="Material" value="Material;Materials/Cube.xml" />
+			<attribute name="Cast Shadows" value="true" />
+		</component>
+		<component type="RigidBody" id="46">
+			<attribute name="Physics Rotation" value="0.999998 2.03898e-05 -0.00199957 9.2408e-06" />
+			<attribute name="Physics Position" value="0.00755669 2.99971 7.54552" />
+			<attribute name="Mass" value="1" />
+			<attribute name="Friction" value="1" />
+			<attribute name="Rolling Friction" value="0.2" />
+		</component>
+		<component type="CollisionShape" id="47">
+			<attribute name="Size" value="2 2 2" />
+		</component>
+	</node>
+	<node id="16777296">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="Camera" />
+		<attribute name="Position" value="-18.6622 7.28 0" />
+		<attribute name="Rotation" value="0.837913 0.0802383 0.537415 -0.0514625" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<component type="Camera" id="16777918">
+			<attribute name="Aspect Ratio" value="1.78571" />
+		</component>
+		<component type="SoundListener" id="16777931" />
+	</node>
+</scene>
